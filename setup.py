@@ -5,7 +5,7 @@ setup(
     version='1',
     description='Assistant with a command line interface',
     url='https://github.com/lotuskolobok/assistant',
-    author='Psar Yelyzaveta, ',
+    author='Psar Yelyzaveta',
     license='MIT',
     include_package_data=True,
     packages=find_namespace_packages(),
