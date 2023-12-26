@@ -165,13 +165,13 @@ class NoteBook(UserDict):
     #     with open(file_name, 'rb') as file:
     #         self.data = json.load(file)
 
-    # сериалізація адресної книги та запису її у файл
+    # сериалізація книги нотаток та запис її у файл
     def serialize(self):
         with open('notebook.bin', 'wb') as file:
             if len(self.data) > 0:
                 pickle.dump(self, file)
 
-    # десериалізація адресної книги з файла
+    # десериалізація книги нотаток з файла
     def deserialize(self):
         try:
             with open('notebook.bin', 'rb') as file:
