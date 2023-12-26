@@ -4,7 +4,7 @@ import classes
 from rich import print
 
 NOTEBOOK_FILE_NAME = "notebook.bin"
-CONTACT_DIR = "D:/python_goit/Assistant"
+CONTACT_DIR = "D:\python_goit\Assistant"
 os.makedirs(
     f"{CONTACT_DIR}", exist_ok=True)
 ABSOLUTE_NOTE_PATH = f"{CONTACT_DIR}\{NOTEBOOK_FILE_NAME}"
@@ -383,11 +383,15 @@ def parser(command):
 
 def main():
     print("Hello. If you need help, write 'help'")
+
+    NOTES_BOOK.deserialize()
+
     while True:
         user_command = input(">>> ")
         command = parser(user_command)
         if command == "end_work":
             print(COMMANDS["end_work"]())
+            NOTES_BOOK.serialize()
             break
         if command == "hello":
             print(COMMANDS["hello"]())
@@ -414,7 +418,6 @@ def main():
 
 
 if __name__ == "__main__":
-    if NOTEBOOK_SERIALIZATION_PATH.exists():
-        NOTES_BOOK.deserialize(NOTEBOOK_SERIALIZATION_PATH)
+    
     main()
     NOTES_BOOK.serialize()

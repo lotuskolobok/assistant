@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 import copy
 import os
-
+import pickle
 
 class NoteName:
 
@@ -157,16 +157,29 @@ class NoteBook(UserDict):
             if old_tag.value == self.data[name].tags[i].value:
                 self.data[name].tags[i].value = new_tag.value
 
-    def serialize(self, file_name="notebook.bin"):
-        with open(file_name, 'wb') as file:
-            json.dump(self.data, file)
+    # def serialize(self, file_name="notebook.bin"):
+    #     with open(file_name, 'wb') as file:
+    #         json.dump(self.data, file)
 
-    def deserialize(self, file_name="notebook.bin"):
-        with open(file_name, 'rb') as file:
-            self.data = json.load(file)
+    # def deserialize(self, file_name="notebook.bin"):
+    #     with open(file_name, 'rb') as file:
+    #         self.data = json.load(file)
+
+    # сериалізація адресної книги та запису її у файл
+    def serialize(self):
+        with open('notebook.bin', 'wb') as file:
+            if len(self.data) > 0:
+                pickle.dump(self, file)
+
+    # десериалізація адресної книги з файла
+    def deserialize(self):
+        try:
+            with open('notebook.bin', 'rb') as file:
+                self.data = pickle.load(file)
+        except:
+            pass
 
     def show_records(self):
         return self.data
 
-    # def get_notes(self):
-    #     return self.notes
+    

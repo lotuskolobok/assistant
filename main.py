@@ -270,9 +270,7 @@ class AddressBook(UserDict):
                 self.data = pickle.load(file)
         except:
             pass
-                
-        
-    
+           
     # сериалізація адресної книги при виході з програми
     def exit(self):
         result = self.dump()
