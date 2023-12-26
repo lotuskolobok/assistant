@@ -4,7 +4,7 @@ import classes
 from rich import print
 
 NOTEBOOK_FILE_NAME = "notebook.bin"
-CONTACT_DIR = "D:\python_goit\Assistant"
+CONTACT_DIR = "D:/python_goit/Assistant"
 os.makedirs(
     f"{CONTACT_DIR}", exist_ok=True)
 ABSOLUTE_NOTE_PATH = f"{CONTACT_DIR}\{NOTEBOOK_FILE_NAME}"
