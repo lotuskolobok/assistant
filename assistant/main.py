@@ -123,8 +123,8 @@ class Record:
         self.home = Home(home)
 
     def __str__(self):
-        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}, e-mails: {'; '.join(p.value for p in self.emails)}, address: {self.home}"
-
+        #return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}, e-mails: {'; '.join(p.value for p in self.emails)}, address: {self.home}"
+        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}, e-mails: {'; '.join(p.value for p in self.emails)}, address: {self.home}, birthday: {self.birthday}"
     
     def days_to_birthday(self):
         if self.birthday.value is None:
