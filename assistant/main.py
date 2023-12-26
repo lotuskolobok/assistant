@@ -436,11 +436,12 @@ def assistant():
 
         elif command == 'sort_folder':
             
-            folder = input('Input folder name for scaning: ') 
+            folder = input('Input folder name for sorting: ') 
 
             if os.path.exists(folder):
                 folder = Path(folder)
-                sort.main(folder.resolve())
+                #sort.main(folder.resolve())
+                sort.main(folder)
                 result = True
             else:
                 print('Error sorting files')
