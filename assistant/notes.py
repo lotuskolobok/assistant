@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 from rich import print
 
-import assistant.classes as classes
+import classes as classes
 
 NOTEBOOK_FILE_NAME = "notebook.bin"
 CONTACT_DIR = "D:\python_goit\Assistant"
