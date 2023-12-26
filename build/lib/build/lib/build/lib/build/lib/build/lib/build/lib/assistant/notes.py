@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-import classes
+import assistant.classes as classes
 from rich import print
 
 NOTEBOOK_FILE_NAME = "notebook.bin"

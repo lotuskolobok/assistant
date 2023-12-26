@@ -1,8 +1,10 @@
-import shutil
 import sys
-import scan
-import normalize
 from pathlib import Path
+
+import shutil
+import assistant.scan as scan
+import assistant.normalize as normalize
+
 
 
 def handle_file(path, root_folder, dist):

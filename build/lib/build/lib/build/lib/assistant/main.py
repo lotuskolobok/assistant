@@ -1,15 +1,15 @@
 from collections import UserDict
 from datetime import datetime
 from datetime import date
-
 from pathlib import Path
-
 import re
 import pickle
-from sort import main as sorting
-import scan
 import os
-import notes
+
+import assistant.sort as sort
+import assistant.notes as notes
+import assistant.scan as scan 
+
 
 
 def validate_email(email):
@@ -442,9 +442,7 @@ def assistant():
 
             if os.path.exists(folder):
                 folder = Path(folder)
-                #sort.main(folder.resolve())
-                #sort.main(folder)
-                sorting(folder)
+                sort.main(folder)
                 result = True
             else:
                 print('Error sorting files')

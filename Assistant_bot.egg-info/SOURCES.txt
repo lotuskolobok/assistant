@@ -4,7 +4,6 @@ Assistant_bot.egg-info/PKG-INFO
 Assistant_bot.egg-info/SOURCES.txt
 Assistant_bot.egg-info/dependency_links.txt
 Assistant_bot.egg-info/entry_points.txt
-Assistant_bot.egg-info/requires.txt
 Assistant_bot.egg-info/top_level.txt
 assistant/classes.py
 assistant/files_generator.py
