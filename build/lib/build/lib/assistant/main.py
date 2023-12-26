@@ -6,7 +6,7 @@ from pathlib import Path
 
 import re
 import pickle
-from sort import main as sorting
+import sort
 import scan
 import os
 import notes
@@ -443,8 +443,7 @@ def assistant():
             if os.path.exists(folder):
                 folder = Path(folder)
                 #sort.main(folder.resolve())
-                #sort.main(folder)
-                sorting(folder)
+                sort.main(folder)
                 result = True
             else:
                 print('Error sorting files')
