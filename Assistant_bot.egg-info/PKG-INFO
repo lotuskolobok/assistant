@@ -3,6 +3,6 @@ Name: Assistant_bot
 Version: 1
 Summary: Assistant with a command line interface
 Home-page: https://github.com/lotuskolobok/assistant
-Author: Psar Yelyzaveta, 
+Author: Psar Yelyzaveta
 License: MIT
 Requires-Dist: markdown
