@@ -1,1 +1,0 @@
-__all__ = ['assistant/scan.py', 'assistant/sort.py', 'assistant/scan.py', 'assistant/classes.py']

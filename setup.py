@@ -9,6 +9,7 @@ setup(
     license='MIT',
     include_package_data=True,
     packages=find_namespace_packages(),
+    install_requires=['markdown'],
     data_files=[("assistant", ["assistant/classes.py", "assistant/main.py",
                 "assistant/normalize.py", "assistant/notes.py", "assistant/scan.py", "assistant/sort.py"])],
     entry_points={'console_scripts': ['assistant = assistant.main:assistant']}
