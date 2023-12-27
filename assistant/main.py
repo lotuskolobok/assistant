@@ -10,7 +10,8 @@ import assistant.notes as notes
 import assistant.sort as sort
 import assistant.scan as scan
 
-
+WORK_DIR = Path(os.path.abspath(__file__)).parent 
+BOOK_NAME = str(WORK_DIR) + '//my_book.bin'
 
 def validate_email(email):
     try:
@@ -258,7 +259,7 @@ class AddressBook(UserDict):
     
     # сериалізація адресної книги та запису її у файл
     def dump(self):
-        with open('my_book.bin', 'wb') as file:
+         with open(BOOK_NAME, 'wb') as file:   #'my_book.bin'
             if len(self.data) > 0:
                 pickle.dump(self, file)
                 return True
@@ -266,7 +267,7 @@ class AddressBook(UserDict):
     # десериалізація адресної книги з файла
     def load(self):
         try:
-            with open('my_book.bin', 'rb') as file:
+            with open(BOOK_NAME, 'rb') as file: #'my_book.bin'
                 self.data = pickle.load(file)
         except:
             pass
@@ -286,7 +287,10 @@ def assistant():
     my_book = AddressBook()
     my_book.load()
 
-    
+    print ('*' * 50)
+    print (['Welcome to Assistant-bot'])
+    print (f'Workdir [{WORK_DIR.parent}]')
+    print ('-' * 50)
 
     while True:
         
@@ -483,6 +487,7 @@ def assistant():
 
 
 if __name__ == "__main__":
+    
     assistant()
 
         

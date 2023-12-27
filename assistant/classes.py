@@ -7,6 +7,10 @@ import copy
 import os
 import pickle
 
+
+WORK_DIR = Path(os.path.abspath(__file__)).parent 
+NOTEBOOK = str(WORK_DIR) + '//notebook.bin'
+
 class NoteName:
 
     def __init__(self, value):
@@ -157,24 +161,17 @@ class NoteBook(UserDict):
             if old_tag.value == self.data[name].tags[i].value:
                 self.data[name].tags[i].value = new_tag.value
 
-    # def serialize(self, file_name="notebook.bin"):
-    #     with open(file_name, 'wb') as file:
-    #         json.dump(self.data, file)
-
-    # def deserialize(self, file_name="notebook.bin"):
-    #     with open(file_name, 'rb') as file:
-    #         self.data = json.load(file)
-
+    
     # сериалізація книги нотаток та запис її у файл
     def serialize(self):
-        with open('notebook.bin', 'wb') as file:
+        with open(NOTEBOOK, 'wb') as file:
             if len(self.data) > 0:
                 pickle.dump(self, file)
 
     # десериалізація книги нотаток з файла
     def deserialize(self):
         try:
-            with open('notebook.bin', 'rb') as file:
+            with open(NOTEBOOK, 'rb') as file:
                 self.data = pickle.load(file)
         except:
             pass

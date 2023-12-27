@@ -290,14 +290,14 @@ def show_note():
         return "Nothing match"
 
 
-def show_note():
-    name = input("Which note do you want to see? ")
-    if name.lower() == "cancel":
-        return "Showing has been canceled"
-    if NOTES_BOOK.show_record(name):
-        return NOTES_BOOK.show_record(name)
-    else:
-        return "Nothing match"
+# def show_note():
+#     name = input("Which note do you want to see? ")
+#     if name.lower() == "cancel":
+#         return "Showing has been canceled"
+#     if NOTES_BOOK.show_record(name):
+#         return NOTES_BOOK.show_record(name)
+#     else:
+#         return "Nothing match"
 
 
 def show_all():
@@ -383,6 +383,7 @@ def parser(command):
 
 
 def main():
+    print (classes.WORK_DIR)
     print("Hello. If you need help, write 'help'")
 
     NOTES_BOOK.deserialize()
