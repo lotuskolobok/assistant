@@ -2,8 +2,8 @@ import sys
 from pathlib import Path
 
 import shutil
-import scan as scan
-import normalize as normalize
+import assistant.scan as scan
+import assistant.normalize as normalize
 
 
 

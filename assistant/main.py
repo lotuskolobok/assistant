@@ -6,9 +6,9 @@ import re
 import pickle
 import os
 
-import sort as sort
-import notes as notes
-import scan as scan 
+import assistant.notes as notes
+import assistant.sort as sort
+import assistant.scan as scan
 
 
 

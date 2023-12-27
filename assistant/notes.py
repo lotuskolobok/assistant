@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 from rich import print
 
-import classes as classes
+import assistant.classes as classes
 
 NOTEBOOK_FILE_NAME = "notebook.bin"
 CONTACT_DIR = "D:\python_goit\Assistant"
@@ -421,4 +421,4 @@ def main():
 if __name__ == "__main__":
     
     main()
-    NOTES_BOOK.serialize()
+    
