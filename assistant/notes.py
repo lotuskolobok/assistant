@@ -4,12 +4,12 @@ from rich import print
 
 import assistant.classes as classes
 
-NOTEBOOK_FILE_NAME = "notebook.bin"
-CONTACT_DIR = "D:\python_goit\Assistant"
-os.makedirs(
-    f"{CONTACT_DIR}", exist_ok=True)
-ABSOLUTE_NOTE_PATH = f"{CONTACT_DIR}\{NOTEBOOK_FILE_NAME}"
-NOTEBOOK_SERIALIZATION_PATH = Path(ABSOLUTE_NOTE_PATH)
+# NOTEBOOK_FILE_NAME = "notebook.bin"
+# CONTACT_DIR = "D:\python_goit\Assistant"
+# os.makedirs(
+#     f"{CONTACT_DIR}", exist_ok=True)
+# ABSOLUTE_NOTE_PATH = f"{CONTACT_DIR}\{NOTEBOOK_FILE_NAME}"
+# NOTEBOOK_SERIALIZATION_PATH = Path(ABSOLUTE_NOTE_PATH)
 
 NOTES_BOOK = classes.NoteBook()
 
